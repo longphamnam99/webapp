@@ -3,7 +3,6 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <!--  -->
           <template v-for="(item, index) in levelList" :key="item.path">
             <li v-if="item.redirect === 'noRedirect' || index == levelList.length - 1" class="breadcrumb-item">
                 {{ item.meta.title }}
@@ -80,6 +79,7 @@ export default {
 #breadcrumb {
   padding: 10px;
   background: #97b4cf;
+  margin-bottom: 1rem;
 }
 #breadcrumb a {
   text-decoration: none;
